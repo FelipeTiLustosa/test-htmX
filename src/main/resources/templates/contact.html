@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>HTMX Example</title>
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+</head>
+<body>
+<div hx-target="this" hx-swap="outerHTML">
+    <div><label>First Name</label>: <span th:text="${firstName}">Joe</span></div>
+    <div><label>Last Name</label>: <span th:text="${lastName}">Blow</span></div>
+    <div><label>Email</label>: <span th:text="${email}">joe@blow.com</span></div>
+    <button hx-get="/contact/1/edit" class="btn primary">Click To Edit</button>
+</div>
+</body>
+</html>
